@@ -30,7 +30,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-<style>
+	<style>
        #map {
         height: 400px;
         width: 100%;
@@ -124,7 +124,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Blank</h1>
+                        <h1 class="page-header">Location</h1>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
@@ -144,13 +144,13 @@
 
 	<script>
       function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
+        var tue = {lat: 51.44860980000001, lng: 5.490714799999978};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
+          zoom: 13,
+          center: tue
         });
         var marker = new google.maps.Marker({
-          position: uluru,
+          position: tue,
           map: map
         });
       }
