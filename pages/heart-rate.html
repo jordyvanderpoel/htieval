@@ -127,21 +127,42 @@
                 </div>
                 <!-- /.row -->
 				<div class="row">
-					<div class="col-lg-9">
+					<div class="col-lg-3 pull-right">
+						<div class="text-center">
+							<h1>Current</h1>
+							<h2>98</h2>
+						</div>
+						<hr>
+						<div class="text-center">
+							<h1>Average</h1>
+							<h2>84</h2>
+						</div>
+						<hr>
+						<div class="text-center">
+							<h1>Max</h1>
+							<h2>201</h2>
+						</div>
+						<hr>
+						<div class="text-center">
+							<h1>Min</h1>
+							<h2>62</h2>
+						</div>
+					</div>
+					<div class="col-lg-9 pull-left">
 						<div class="panel panel-default">
 							<div class="panel-heading">
-								<i class="fa fa-bar-chart-o fa-fw"></i> Heart rate of last month
+								<i class="fa fa-bar-chart-o fa-fw"></i> Heart rate of last <span id="time">month</span>
 							</div>
 							<!-- /.panel-heading -->
 							<div class="panel-body">
-								<div id="morris-area-chart"></div>
+								<div id="morris-area-chart" style="height: 394.6px;"></div>
 							</div>
 							<!-- /.panel-body -->
 							<div class="panel-footer text-center">
 								<div class="btn-group">
-									<button type="button" class="btn btn-default" onclick="chart.setData(month);">Month</button>
-									<button type="button" class="btn btn-default" onclick="chart.setData(week);">Week</button>
-									<button type="button" class="btn btn-default" onclick="chart.setData(day);">Day</button>
+									<button type="button" class="btn btn-default" onclick="chart.setData(month);$('#time').html('month');">Month</button>
+									<button type="button" class="btn btn-default" onclick="chart.setData(week);$('#time').html('week');">Week</button>
+									<button type="button" class="btn btn-default" onclick="chart.setData(day);$('#time').html('day');">Day</button>
 								</div>
 							</div>
 						</div>
@@ -176,11 +197,13 @@
 		element: 'morris-area-chart',
         data: month,
         xkey: 'period',
-        ykeys: ['iphone', 'ipad', 'itouch'],
-        labels: ['iPhone', 'iPad', 'iPod Touch'],
+        ykeys: ['heartrate'],
+        labels: ['Heart rate'],
         pointSize: 3,
         hideHover: 'auto',
-        resize: true
+        resize: true,
+		behaveLikeLine: true,
+		lineColors: ['red']
 	});
 	</script>
 
