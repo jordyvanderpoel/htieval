@@ -127,22 +127,29 @@
                 </div>
                 <!-- /.row -->
 				<div class="row">
-                <div class="col-lg-8">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Area Chart Example
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div id="morris-area-chart-heart-rate"></div>
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-                <!-- /.col-lg-8 -->
-            </div>
-            <!-- /.row -->
+					<div class="col-lg-9">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<i class="fa fa-bar-chart-o fa-fw"></i> Heart rate of last month
+							</div>
+							<!-- /.panel-heading -->
+							<div class="panel-body">
+								<div id="morris-area-chart"></div>
+							</div>
+							<!-- /.panel-body -->
+							<div class="panel-footer text-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-default" onclick="chart.setData(month);">Month</button>
+									<button type="button" class="btn btn-default" onclick="chart.setData(week);">Week</button>
+									<button type="button" class="btn btn-default" onclick="chart.setData(day);">Day</button>
+								</div>
+							</div>
+						</div>
+						<!-- /.panel -->
+					</div>
+					<!-- /.col-lg-9 -->
+				</div>
+				<!-- /.row -->
             </div>
             <!-- /.container-fluid -->
         </div>
@@ -163,7 +170,19 @@
     <!-- Morris Charts JavaScript -->
     <script src="../vendor/raphael/raphael.min.js"></script>
     <script src="../vendor/morrisjs/morris.min.js"></script>
-    <script src="../data/morris-data.js"></script>
+	<script src="../data/data-heart-rate.js"></script>
+    <script>
+	var chart = Morris.Area({
+		element: 'morris-area-chart',
+        data: month,
+        xkey: 'period',
+        ykeys: ['iphone', 'ipad', 'itouch'],
+        labels: ['iPhone', 'iPad', 'iPod Touch'],
+        pointSize: 3,
+        hideHover: 'auto',
+        resize: true
+	});
+	</script>
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
