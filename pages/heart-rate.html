@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>DASHBOARD - Heart rate</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -127,35 +127,37 @@
                 </div>
                 <!-- /.row -->
 				<div class="row">
-					<div class="col-lg-3 pull-right">
-						<div class="text-center">
-							<h1>Current</h1>
-							<h2>98</h2>
-						</div>
-						<hr>
-						<div class="text-center">
-							<h1>Average</h1>
-							<h2>84</h2>
-						</div>
-						<hr>
-						<div class="text-center">
-							<h1>Max</h1>
-							<h2>201</h2>
-						</div>
-						<hr>
-						<div class="text-center">
-							<h1>Min</h1>
-							<h2>62</h2>
+					<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 pull-right">
+						<div class="row text-center">
+							<div class="text-center col-lg-12 col-md-3 col-sm-3 col-xs-6">
+								<h1>Current</h1>
+								<h2>98</h2>
+							</div>
+							<hr class="col-lg-10 hidden-md hidden-sm hidden-xs" style="margin: 10px 0px;">
+							<div class="text-center col-lg-12 col-md-3 col-sm-3 col-xs-6">
+								<h1>Average</h1>
+								<h2>84</h2>
+							</div>
+							<hr class="col-lg-10 hidden-md hidden-sm hidden-xs" style="margin: 10px 0px;">
+							<div class="text-center col-lg-12 col-md-3 col-sm-3 col-xs-3">
+								<h1>Max</h1>
+								<h2>201</h2>
+							</div>
+							<hr class="col-lg-10 hidden-md hidden-sm hidden-xs" style="margin: 10px 0px;">
+							<div class="text-center col-lg-12 col-md-3 col-sm-3 col-xs-3">
+								<h1>Min</h1>
+								<h2>62</h2>
+							</div>
 						</div>
 					</div>
-					<div class="col-lg-9 pull-left">
+					<div class="col-lg-9 col-md-12 col-sm-12 col-xs-12 pull-left">
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<i class="fa fa-bar-chart-o fa-fw"></i> Heart rate of last <span id="time">month</span>
 							</div>
 							<!-- /.panel-heading -->
 							<div class="panel-body">
-								<div id="morris-area-chart" style="height: 394.6px;"></div>
+								<div id="morris-area-chart" style="height: 244.6px;"></div>
 							</div>
 							<!-- /.panel-body -->
 							<div class="panel-footer text-center">
@@ -167,6 +169,14 @@
 							</div>
 						</div>
 						<!-- /.panel -->
+						<div class="panel panel-danger" style="height: 150px;">
+							<div class="panel-heading">
+								HEALTH WARNING
+							</div>
+							<div class="panel-body">
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+							</div>
+						</div>
 					</div>
 					<!-- /.col-lg-9 -->
 				</div>
