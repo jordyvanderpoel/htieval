@@ -162,9 +162,9 @@
 							<!-- /.panel-body -->
 							<div class="panel-footer text-center">
 								<div class="btn-group">
-									<button type="button" class="btn btn-default" onclick="chart.setData(month);$('#time').html('month');">Month</button>
-									<button type="button" class="btn btn-default" onclick="chart.setData(week);$('#time').html('week');">Week</button>
-									<button type="button" class="btn btn-default" onclick="chart.setData(day);$('#time').html('day');">Day</button>
+									<button type="button" class="btn btn-default" onclick="chart.setData(month_bt);$('#time').html('month');">Month</button>
+									<button type="button" class="btn btn-default" onclick="chart.setData(week_bt);$('#time').html('week');">Week</button>
+									<button type="button" class="btn btn-default" onclick="chart.setData(day_bt);$('#time').html('day');">Day</button>
 								</div>
 							</div>
 						</div>
@@ -205,10 +205,10 @@
     <script>
 	var chart = Morris.Area({
 		element: 'morris-area-chart',
-        data: month,
+        data: month_bt,
         xkey: 'period',
-        ykeys: ['heartrate'],
-        labels: ['Heart rate'],
+        ykeys: ['bodytemp'],
+        labels: ['Body temperature'],
         pointSize: 3,
 		fillingOpacity: 0,
         hideHover: 'auto',

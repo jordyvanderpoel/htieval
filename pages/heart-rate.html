@@ -162,9 +162,9 @@
 							<!-- /.panel-body -->
 							<div class="panel-footer text-center">
 								<div class="btn-group">
-									<button type="button" class="btn btn-default" onclick="chart.setData(month);$('#time').html('month');">Month</button>
-									<button type="button" class="btn btn-default" onclick="chart.setData(week);$('#time').html('week');">Week</button>
-									<button type="button" class="btn btn-default" onclick="chart.setData(day);$('#time').html('day');">Day</button>
+									<button type="button" class="btn btn-default" onclick="chart.setData(month_hr);$('#time').html('month');">Month</button>
+									<button type="button" class="btn btn-default" onclick="chart.setData(week_hr);$('#time').html('week');">Week</button>
+									<button type="button" class="btn btn-default" onclick="chart.setData(day_hr);$('#time').html('day');">Day</button>
 								</div>
 							</div>
 						</div>
@@ -201,11 +201,11 @@
     <!-- Morris Charts JavaScript -->
     <script src="../vendor/raphael/raphael.min.js"></script>
     <script src="../vendor/morrisjs/morris.min.js"></script>
-	<script src="../data/data-blood-pressure.js"></script>
+	<script src="../data/data-heart-rate.js"></script>
     <script>
 	var chart = Morris.Area({
 		element: 'morris-area-chart',
-        data: month,
+        data: month_hr,
         xkey: 'period',
         ykeys: ['heartrate'],
         labels: ['Heart rate'],

@@ -94,6 +94,9 @@
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
+						<li>
+                            <a href="location.html"><i class="fa fa-compass"></i> Location</a>
+                        </li>
                         <li>
                             <a href="#"><i class="fa fa-cogs"></i> Settings<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -105,9 +108,6 @@
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="location.html"><i class="fa fa-compass"></i> Location</a>
                         </li>
                     </ul>
                 </div>
@@ -125,28 +125,28 @@
             </div>
             <!-- /.row -->
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="panel panel-default">
+				<div class="col-lg-6">
+                    <div class="panel panel-default" style="cursor: pointer;" onclick="document.location = 'heart-rate.html';">
                         <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Area Chart Example
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Heart rate of last week
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <div id="morris-area-chart"></div>
+                            <div id="morris-area-chart-hr" style="max-height: calc(50vh - 180.8px) !important; overflow: hidden;"></div>
                         </div>
                         <!-- /.panel-body -->
                     </div>
                     <!-- /.panel -->
                 </div>
                 <!-- /.col-lg-6 -->
-				<div class="col-lg-6">
-                    <div class="panel panel-default">
+                <div class="col-lg-6">
+                    <div class="panel panel-default" style="cursor: pointer;" onclick="document.location = 'blood-pressure.html';">
                         <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Area Chart Example
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Blood pressure of last week
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <div id="morris-area-chart-2"></div>
+                            <div id="morris-area-chart-bp" style="max-height: calc(50vh - 180.8px) !important; overflow: hidden;"></div>
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -156,14 +156,14 @@
             </div>
             <!-- /.row -->
 			<div class="row">
-                <div class="col-lg-6">
-                    <div class="panel panel-default">
+                <div class="col-lg-6" >
+                    <div class="panel panel-default" style="cursor: pointer;" onclick="document.location = 'body-temperature.html';" >
                         <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Area Chart Example
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Body temperature of last week
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <div id="morris-area-chart-3"></div>
+                            <div id="morris-area-chart-bt" style="max-height: calc(50vh - 180.8px) !important; overflow: hidden;"></div>
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -171,13 +171,13 @@
                 </div>
                 <!-- /.col-lg-6 -->
 				<div class="col-lg-6">
-                    <div class="panel panel-default">
+                    <div class="panel panel-default" style="cursor: pointer;" onclick="document.location = 'skin-conductivity.html';">
                         <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Area Chart Example
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Skin conductivity of last week
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <div id="morris-area-chart-4"></div>
+                            <div id="morris-area-chart-sc" style="max-height: calc(50vh - 180.8px) !important; overflow: hidden;"></div>
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -204,7 +204,64 @@
     <!-- Morris Charts JavaScript -->
     <script src="../vendor/raphael/raphael.min.js"></script>
     <script src="../vendor/morrisjs/morris.min.js"></script>
-    <script src="../data/morris-data.js"></script>
+    <script src="../data/data-blood-pressure.js"></script>
+	<script src="../data/data-body-temperature.js"></script>
+	<script src="../data/data-heart-rate.js"></script>
+	<script src="../data/data-skin-conductivity.js"></script>
+	<script>
+	Morris.Area({
+		element: 'morris-area-chart-hr',
+        data: week_hr,
+        xkey: 'period',
+        ykeys: ['heartrate'],
+        labels: ['Heart rate'],
+		fillingOpacity: 0,
+        pointSize: 3,
+        hideHover: 'auto',
+        resize: true,
+		behaveLikeLine: true,
+		lineColors: ['red']
+	});
+	Morris.Area({
+		element: 'morris-area-chart-bp',
+        data: week_bp,
+        xkey: 'period',
+        ykeys: ['bloodpressure'],
+        labels: ['Blood pressure'],
+		fillingOpacity: 0,
+        pointSize: 3,
+        hideHover: 'auto',
+        resize: true,
+		behaveLikeLine: true,
+		lineColors: ['red']
+	});
+	Morris.Area({
+		element: 'morris-area-chart-bt',
+        data: week_bt,
+        xkey: 'period',
+        ykeys: ['bodytemp'],
+        labels: ['Body temperature'],
+        pointSize: 3,
+		fillingOpacity: 0,
+        hideHover: 'auto',
+        resize: true,
+		behaveLikeLine: true,
+		lineColors: ['#ffcd94']
+	});
+	Morris.Area({
+		element: 'morris-area-chart-sc',
+        data: week_sc,
+        xkey: 'period',
+        ykeys: ['skincond'],
+        labels: ['Skin conductivity'],
+        pointSize: 3,
+		fillingOpacity: 0,
+        hideHover: 'auto',
+        resize: true,
+		behaveLikeLine: true,
+		lineColors: ['#ADD8E6']
+	});
+	</script>
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>

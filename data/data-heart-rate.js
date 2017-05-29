@@ -1,4 +1,4 @@
-var day = [{
+var day_hr = [{
             period: '2017-06-28 10:00',
             heartrate: 70
         }, {
@@ -74,7 +74,7 @@ var day = [{
             period: '2017-06-29 10:00',
             heartrate: 98
         }];
-var week = [{
+var week_hr = [{
             period: '2017-06-23',
             heartrate: 79
         }, {
@@ -96,7 +96,7 @@ var week = [{
             period: '2017-06-29',
             heartrate: 84
         }];
-var month = [{
+var month_hr = [{
             period: '2017-05-31',
             heartrate: 87
         }, {
