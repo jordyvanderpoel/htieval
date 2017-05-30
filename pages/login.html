@@ -77,6 +77,19 @@
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
 
+	<script>
+	$(document).ready(function() {
+		var now = new Date();
+		var nowString = now.toDateString() + " " + ('0' + now.getHours()).slice(-2) + ":" + ('0' + now.getMinutes()).slice(-2) + ":" + ('0' + now.getSeconds()).slice(-2);
+		$('#time').html(nowString);
+		
+		setInterval(function(){
+			var now = new Date();
+			var nowString = now.toDateString() + " " + ('0' + now.getHours()).slice(-2) + ":" + ('0' + now.getMinutes()).slice(-2) + ":" + ('0' + now.getSeconds()).slice(-2);
+			$('#time').html(nowString);
+		}, 1000);
+	});
+	</script>
 </body>
 
 </html>

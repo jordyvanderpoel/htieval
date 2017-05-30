@@ -46,6 +46,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="index.html">DASHBOARD</a>
+				<span class="navbar-brand" style="position: absolute;width: 100%;left: 0;text-align: center;margin:0 auto;" id="time"></span>
             </div>
             <!-- /.navbar-header -->
 
@@ -230,6 +231,19 @@
 				}
 			});
 		});
+	});
+	</script>
+	<script>
+	$(document).ready(function() {
+		var now = new Date();
+		var nowString = now.toDateString() + " " + ('0' + now.getHours()).slice(-2) + ":" + ('0' + now.getMinutes()).slice(-2) + ":" + ('0' + now.getSeconds()).slice(-2);
+		$('#time').html(nowString);
+		
+		setInterval(function(){
+			var now = new Date();
+			var nowString = now.toDateString() + " " + ('0' + now.getHours()).slice(-2) + ":" + ('0' + now.getMinutes()).slice(-2) + ":" + ('0' + now.getSeconds()).slice(-2);
+			$('#time').html(nowString);
+		}, 1000);
 	});
 	</script>
 </body>
