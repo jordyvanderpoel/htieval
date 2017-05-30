@@ -136,12 +136,12 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td>Heart rate</td>
+									<td>Heart rate <small><i>(min 0, max 250)</i></small></td>
 									<td>
 									<button class="btn btn-danger pull-right" onclick="$('#input_hr_lower').val(parseInt($('#input_hr_lower').val()) - 1);"><span class="fa fa-minus"></span></button>
 									</td>
 									<td>
-									<input type="number" class="form-control" value="45" id="input_hr_lower">
+									<input type="number" class="form-control" value="45" id="input_hr_lower" min="0" max="250">
 									</td>
 									<td>
 									<button class="btn btn-success pull-left" onclick="$('#input_hr_lower').val(parseInt($('#input_hr_lower').val()) + 1);"><span class="fa fa-plus"></span></button>
@@ -149,18 +149,18 @@
 									<td>
 									<button class="btn btn-danger pull-right" onclick="$('#input_hr_upper').val(parseInt($('#input_hr_upper').val()) - 1);"><span class="fa fa-minus"></span></button>
 									</td>
-									<td><input type="number" class="form-control" value="210" id="input_hr_upper"></td>
+									<td><input type="number" class="form-control" value="210" id="input_hr_upper" min="0" max="250"></td>
 									<td>
 									<button class="btn btn-success pull-left" onclick="$('#input_hr_upper').val(parseInt($('#input_hr_upper').val()) + 1);"><span class="fa fa-plus"></span></button>
 									</td>
 								</tr>
 								<tr>
-									<td>Blood pressure</td>
+									<td>Blood pressure <small><i>(min 0, max 200)</i></small></td>
 									<td>
 									<button class="btn btn-danger pull-right" onclick="$('#input_bp_lower').val(parseInt($('#input_bp_lower').val()) - 1);"><span class="fa fa-minus"></span></button>
 									</td>
 									<td>
-									<input type="number" class="form-control" value="90" id="input_bp_lower">
+									<input type="number" class="form-control" value="90" id="input_bp_lower" min="0" max="200">
 									</td>
 									<td>
 									<button class="btn btn-success pull-left" onclick="$('#input_bp_lower').val(parseInt($('#input_bp_lower').val()) + 1);"><span class="fa fa-plus"></span></button>
@@ -168,18 +168,18 @@
 									<td>
 									<button class="btn btn-danger pull-right" onclick="$('#input_bp_upper').val(parseInt($('#input_bp_upper').val()) - 1);"><span class="fa fa-minus"></span></button>
 									</td>
-									<td><input type="number" class="form-control" value="180" id="input_bp_upper"></td>
+									<td><input type="number" class="form-control" value="180" id="input_bp_upper" min="0" max="200"></td>
 									<td>
 									<button class="btn btn-success pull-left" onclick="$('#input_bp_upper').val(parseInt($('#input_bp_upper').val()) + 1);"><span class="fa fa-plus"></span></button>
 									</td>
 								</tr>
 								<tr>
-									<td>Body temperature</td>
+									<td>Body temperature <small><i>(min 30, max 45)</i></small></td>
 									<td>
 									<button class="btn btn-danger pull-right" onclick="$('#input_bt_lower').val(parseInt($('#input_bt_lower').val()) - 1);"><span class="fa fa-minus"></span></button>
 									</td>
 									<td>
-									<input type="number" class="form-control" value="35" id="input_bt_lower">
+									<input type="number" class="form-control" value="35" id="input_bt_lower" min="30" max="45">
 									</td>
 									<td>
 									<button class="btn btn-success pull-left" onclick="$('#input_bt_lower').val(parseInt($('#input_bt_lower').val()) + 1);"><span class="fa fa-plus"></span></button>
@@ -187,18 +187,18 @@
 									<td>
 									<button class="btn btn-danger pull-right" onclick="$('#input_bt_upper').val(parseInt($('#input_bt_upper').val()) - 1);"><span class="fa fa-minus"></span></button>
 									</td>
-									<td><input type="number" class="form-control" value="39" id="input_bt_upper"></td>
+									<td><input type="number" class="form-control" value="39" id="input_bt_upper" min="30" max="45"></td>
 									<td>
 									<button class="btn btn-success pull-left" onclick="$('#input_bt_upper').val(parseInt($('#input_bt_upper').val()) + 1);"><span class="fa fa-plus"></span></button>
 									</td>
 								</tr>
 								<tr>
-									<td>Skin conductivity</td>
+									<td>Skin conductivity <small><i>(min 0, max 15)</i></small></td>
 									<td>
 									<button class="btn btn-danger pull-right" onclick="$('#input_sc_lower').val(parseInt($('#input_sc_lower').val()) - 1);"><span class="fa fa-minus"></span></button>
 									</td>
 									<td>
-									<input type="number" class="form-control" value="35" id="input_sc_lower">
+									<input type="number" class="form-control" value="2" id="input_sc_lower" min="0" max="15">
 									</td>
 									<td>
 									<button class="btn btn-success pull-left" onclick="$('#input_sc_lower').val(parseInt($('#input_sc_lower').val()) + 1);"><span class="fa fa-plus"></span></button>
@@ -206,7 +206,7 @@
 									<td>
 									<button class="btn btn-danger pull-right" onclick="$('#input_sc_upper').val(parseInt($('#input_sc_upper').val()) - 1);"><span class="fa fa-minus"></span></button>
 									</td>
-									<td><input type="number" class="form-control" value="39" id="input_sc_upper"></td>
+									<td><input type="number" class="form-control" value="10" id="input_sc_upper" min="0" max="15"></td>
 									<td>
 									<button class="btn btn-success pull-left" onclick="$('#input_sc_upper').val(parseInt($('#input_sc_upper').val()) + 1);"><span class="fa fa-plus"></span></button>
 									</td>
