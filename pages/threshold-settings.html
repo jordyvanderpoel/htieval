@@ -261,7 +261,6 @@
 	
 	function changeVals(id, value){
 		var s = parseInt($('#input_'+id).val()) + value;
-		console.log(id, s);
 		if(
 			((id === "hr_upper" || id === "hr_lower") && !(s > 250 || s < 0)) ||
 			((id === "bp_upper" || id === "bp_lower") && !(s > 200 || s < 0)) ||
