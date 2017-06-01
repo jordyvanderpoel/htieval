@@ -141,77 +141,77 @@
 								<tr>
 									<td>Heart rate <small><i>(min 0, max 250)</i></small></td>
 									<td>
-									<button class="btn btn-danger pull-right" onclick="$('#input_hr_lower').val(parseInt($('#input_hr_lower').val()) - 1);"><span class="fa fa-minus"></span></button>
+									<button class="btn btn-danger pull-right" onclick="changeVals('hr_lower', -1);"><span class="fa fa-minus"></span></button>
 									</td>
 									<td>
 									<input type="number" class="form-control" value="45" id="input_hr_lower" min="0" max="250">
 									</td>
 									<td>
-									<button class="btn btn-success pull-left" onclick="$('#input_hr_lower').val(parseInt($('#input_hr_lower').val()) + 1);"><span class="fa fa-plus"></span></button>
+									<button class="btn btn-success pull-left" onclick="changeVals('hr_lower', 1);"><span class="fa fa-plus"></span></button>
 									</td>
 									<td>
-									<button class="btn btn-danger pull-right" onclick="$('#input_hr_upper').val(parseInt($('#input_hr_upper').val()) - 1);"><span class="fa fa-minus"></span></button>
+									<button class="btn btn-danger pull-right" onclick="changeVals('hr_upper', -1);"><span class="fa fa-minus"></span></button>
 									</td>
 									<td><input type="number" class="form-control" value="210" id="input_hr_upper" min="0" max="250"></td>
 									<td>
-									<button class="btn btn-success pull-left" onclick="$('#input_hr_upper').val(parseInt($('#input_hr_upper').val()) + 1);"><span class="fa fa-plus"></span></button>
+									<button class="btn btn-success pull-left" onclick="changeVals('hr_upper', 1);"><span class="fa fa-plus"></span></button>
 									</td>
 								</tr>
 								<tr>
 									<td>Blood pressure <small><i>(min 0, max 200)</i></small></td>
 									<td>
-									<button class="btn btn-danger pull-right" onclick="$('#input_bp_lower').val(parseInt($('#input_bp_lower').val()) - 1);"><span class="fa fa-minus"></span></button>
+									<button class="btn btn-danger pull-right" onclick="changeVals('bp_lower', -1);"><span class="fa fa-minus"></span></button>
 									</td>
 									<td>
 									<input type="number" class="form-control" value="90" id="input_bp_lower" min="0" max="200">
 									</td>
 									<td>
-									<button class="btn btn-success pull-left" onclick="$('#input_bp_lower').val(parseInt($('#input_bp_lower').val()) + 1);"><span class="fa fa-plus"></span></button>
+									<button class="btn btn-success pull-left" onclick="changeVals('bp_lower', 1);"><span class="fa fa-plus"></span></button>
 									</td>
 									<td>
-									<button class="btn btn-danger pull-right" onclick="$('#input_bp_upper').val(parseInt($('#input_bp_upper').val()) - 1);"><span class="fa fa-minus"></span></button>
+									<button class="btn btn-danger pull-right" onclick="changeVals('bp_upper', -1);"><span class="fa fa-minus"></span></button>
 									</td>
 									<td><input type="number" class="form-control" value="180" id="input_bp_upper" min="0" max="200"></td>
 									<td>
-									<button class="btn btn-success pull-left" onclick="$('#input_bp_upper').val(parseInt($('#input_bp_upper').val()) + 1);"><span class="fa fa-plus"></span></button>
+									<button class="btn btn-success pull-left" onclick="changeVals('bp_upper', -1);"><span class="fa fa-plus"></span></button>
 									</td>
 								</tr>
 								<tr>
 									<td>Body temperature <small><i>(min 30, max 45)</i></small></td>
 									<td>
-									<button class="btn btn-danger pull-right" onclick="$('#input_bt_lower').val(parseInt($('#input_bt_lower').val()) - 1);"><span class="fa fa-minus"></span></button>
+									<button class="btn btn-danger pull-right" onclick="changeVals('bt_lower', -1);"><span class="fa fa-minus"></span></button>
 									</td>
 									<td>
 									<input type="number" class="form-control" value="35" id="input_bt_lower" min="30" max="45">
 									</td>
 									<td>
-									<button class="btn btn-success pull-left" onclick="$('#input_bt_lower').val(parseInt($('#input_bt_lower').val()) + 1);"><span class="fa fa-plus"></span></button>
+									<button class="btn btn-success pull-left" onclick="changeVals('bt_lower', 1);"><span class="fa fa-plus"></span></button>
 									</td>
 									<td>
-									<button class="btn btn-danger pull-right" onclick="$('#input_bt_upper').val(parseInt($('#input_bt_upper').val()) - 1);"><span class="fa fa-minus"></span></button>
+									<button class="btn btn-danger pull-right" onclick="changeVals('bt_upper', -1);"><span class="fa fa-minus"></span></button>
 									</td>
 									<td><input type="number" class="form-control" value="39" id="input_bt_upper" min="30" max="45"></td>
 									<td>
-									<button class="btn btn-success pull-left" onclick="$('#input_bt_upper').val(parseInt($('#input_bt_upper').val()) + 1);"><span class="fa fa-plus"></span></button>
+									<button class="btn btn-success pull-left" onclick="changeVals('bt_upper', 1);"><span class="fa fa-plus"></span></button>
 									</td>
 								</tr>
 								<tr>
 									<td>Skin conductivity <small><i>(min 0, max 15)</i></small></td>
 									<td>
-									<button class="btn btn-danger pull-right" onclick="$('#input_sc_lower').val(parseInt($('#input_sc_lower').val()) - 1);"><span class="fa fa-minus"></span></button>
+									<button class="btn btn-danger pull-right" onclick="changeVals('sc_lower', -1);"><span class="fa fa-minus"></span></button>
 									</td>
 									<td>
 									<input type="number" class="form-control" value="2" id="input_sc_lower" min="0" max="15">
 									</td>
 									<td>
-									<button class="btn btn-success pull-left" onclick="$('#input_sc_lower').val(parseInt($('#input_sc_lower').val()) + 1);"><span class="fa fa-plus"></span></button>
+									<button class="btn btn-success pull-left" onclick="changeVals('sc_lower', 1);"><span class="fa fa-plus"></span></button>
 									</td>
 									<td>
-									<button class="btn btn-danger pull-right" onclick="$('#input_sc_upper').val(parseInt($('#input_sc_upper').val()) - 1);"><span class="fa fa-minus"></span></button>
+									<button class="btn btn-danger pull-right" onclick="changeVals('sc_upper', -1);"><span class="fa fa-minus"></span></button>
 									</td>
 									<td><input type="number" class="form-control" value="10" id="input_sc_upper" min="0" max="15"></td>
 									<td>
-									<button class="btn btn-success pull-left" onclick="$('#input_sc_upper').val(parseInt($('#input_sc_upper').val()) + 1);"><span class="fa fa-plus"></span></button>
+									<button class="btn btn-success pull-left" onclick="changeVals('sc_upper', 1);"><span class="fa fa-plus"></span></button>
 									</td>
 								</tr>
 							</tbody>
@@ -258,6 +258,19 @@
 			$('#time').html(nowString);
 		}, 1000);
 	});
+	
+	function changeVals(id, value){
+		var s = parseInt($('#input_'+id).val()) + value;
+		console.log(id, s);
+		if(
+			((id === "hr_upper" || id === "hr_lower") && !(s > 250 || s < 0)) ||
+			((id === "bp_upper" || id === "bp_lower") && !(s > 200 || s < 0)) ||
+			((id === "bt_upper" || id === "bt_lower") && !(s > 45 || s < 30)) ||
+			((id === "sc_upper" || id === "sc_lower") && !(s > 15 || s < 0))
+			){
+			$('#input_'+id).val(s);
+		}
+	}
 	</script>
 </body>
 
